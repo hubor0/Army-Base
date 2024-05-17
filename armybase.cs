@@ -352,7 +352,7 @@ public class armybase : BloonsTD6Mod
             public override int Cost => 240;
             public override string Portrait => "001copy";
             public override string DisplayName => "Sturdier Soldiers";
-            public override string Description => "Can now withstand additional 4 Bloon layers";
+            public override string Description => "Can now withstand additional 4 Bloons";
 
             public override void ApplyUpgrade(TowerModel towerModel)
             {
