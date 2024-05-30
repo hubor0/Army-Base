@@ -90,10 +90,11 @@ public class armybase : BloonsTD6Mod
                 summon.weapons[0].projectile.GetDamageModel().immuneBloonProperties = BloonProperties.Lead;
                 summon.weapons[0].projectile.pierce = 13;
                 summon.range = 100000;
-                summon.weapons[0].projectile.GetBehavior<TravelAlongPathModel>().lifespanFrames = 99999;
+                summon.weapons[0].projectile.GetBehavior<TravelAlongPathModel>().lifespanFrames = 0;
+                summon.weapons[0].projectile.GetBehavior<TravelAlongPathModel>().lifespan = 999999f;
                 summon.weapons[0].projectile.RemoveBehavior<CreateEffectOnExhaustedModel>();
-                agemodel.lifespanFrames = 99999;
-                agemodel.lifespan = 99999;
+                agemodel.lifespanFrames = 0;
+                agemodel.lifespan = 999999f;
                 agemodel.rounds = 9999;
                 towerModel.range = 20;
                 summon.weapons[0].projectile.AddBehavior(agemodel);
@@ -114,7 +115,7 @@ public class armybase : BloonsTD6Mod
             {
                 towerModel.ApplyDisplay<hangar100>();
                 var summon = towerModel.GetAttackModel("AttackModel_Summon_");
-                summon.weapons[0].projectile.GetBehavior<TravelAlongPathModel>().speedFrames *= 1.2f;
+                summon.weapons[0].projectile.GetBehavior<TravelAlongPathModel>().speed *= 1.2f;
             }
         }
         public class u200 : ModUpgrade<ArmyBase>
@@ -150,8 +151,8 @@ public class armybase : BloonsTD6Mod
                 towerModel.ApplyDisplay<hangar300>();
                 var summon = towerModel.GetAttackModel("AttackModel_Summon_");
                 summon.weapons[0].projectile.ApplyDisplay<merccharge>();
-                summon.weapons[0].projectile.GetBehavior<TravelAlongPathModel>().speedFrames *= 1.3f;
-                summon.weapons[0].rate -= 7f;
+                summon.weapons[0].projectile.GetBehavior<TravelAlongPathModel>().speed *= 1.3f;
+                summon.weapons[0].rate -= 8.5f;
 
             }
         }
@@ -160,7 +161,7 @@ public class armybase : BloonsTD6Mod
 
             public override int Path => TOP;
             public override int Tier => 4;
-            public override int Cost => 4275;
+            public override int Cost => 3275;
             public override string Portrait => "400copy";
 
             public override string DisplayName => "Dirtbike";
@@ -169,8 +170,8 @@ public class armybase : BloonsTD6Mod
             {
                 towerModel.ApplyDisplay<hangar400>();
                 var summon = towerModel.GetAttackModel("AttackModel_Summon_");
-                summon.weapons[0].projectile.GetBehavior<TravelAlongPathModel>().speedFrames *= 2f;
-                summon.weapons[0].rate -= 13f;
+                summon.weapons[0].projectile.GetBehavior<TravelAlongPathModel>().speed *= 2f;
+                summon.weapons[0].rate -= 10f;
                 summon.weapons[0].projectile.ApplyDisplay<dirtbike>();
                 summon.weapons[0].projectile.pierce += 10;
                 summon.weapons[0].projectile.AddBehavior(new DamageModifierForTagModel("DamageModifierForTagModel_Fortified", "Fortified", 1, 10, false, false));
@@ -182,7 +183,7 @@ public class armybase : BloonsTD6Mod
 
             public override int Path => TOP;
             public override int Tier => 5;
-            public override int Cost => 17200;
+            public override int Cost => 19200;
             public override string Portrait => "500copy";
 
             public override string DisplayName => "Road Hog";
@@ -191,16 +192,17 @@ public class armybase : BloonsTD6Mod
             {
                 towerModel.ApplyDisplay<hangar500>();
                 var summon = towerModel.GetAttackModel("AttackModel_Summon_");
-                summon.weapons[0].projectile.GetBehavior<TravelAlongPathModel>().speedFrames *= 2f;
+                summon.weapons[0].projectile.GetBehavior<TravelAlongPathModel>().speed *= 2f;
                 summon.weapons[0].projectile.ApplyDisplay<roadhog>();
+                summon.weapons[0].rate -= 1.5f;
                 summon.weapons[0].projectile.pierce += 5;
                 summon.weapons[0].projectile.GetDamageModel().damage += 15;
                 summon.weapons[0].projectile.AddBehavior(new DamageModifierForTagModel("DamageModifierForTagModel_Fortified", "Fortified", 1, 30, false, false));
                 summon.weapons[0].projectile.AddBehavior(new DamageModifierForTagModel("DamageModifierForTagModel_Ceramic", "Ceramic", 1, 30, false, false));
-                summon.weapons[0].projectile.AddBehavior(new DamageModifierForTagModel("Moab", "Moab", 1, 20, false, true));
-                summon.weapons[0].projectile.AddBehavior(new DamageModifierForTagModel("Bfb", "Bfb", 1, 20, false, true));
+                summon.weapons[0].projectile.AddBehavior(new DamageModifierForTagModel("Moab", "Moab", 1, 25, false, true));
+                summon.weapons[0].projectile.AddBehavior(new DamageModifierForTagModel("Bfb", "Bfb", 1, 25, false, true));
                 summon.weapons[0].projectile.AddBehavior(new DamageModifierForTagModel("Ddt", "Ddt", 1, 30, false, true));
-                summon.weapons[0].projectile.AddBehavior(new DamageModifierForTagModel("Zomg", "Zomg", 1, 20, false, true));
+                summon.weapons[0].projectile.AddBehavior(new DamageModifierForTagModel("Zomg", "Zomg", 1, 18, false, true));
                 summon.weapons[0].projectile.AddBehavior(new DamageModifierForTagModel("Bad", "Bad", 1, 20, false, true));
             }
         }
@@ -435,7 +437,7 @@ public class armybase : BloonsTD6Mod
                 towerModel.ApplyDisplay<hangar005>();
                 var summon = towerModel.GetAttackModel("AttackModel_Summon_");
                 summon.weapons[0].rate += 10f;
-                summon.weapons[0].projectile.GetBehavior<TravelAlongPathModel>().speedFrames -= 0.2f;
+                summon.weapons[0].projectile.GetBehavior<TravelAlongPathModel>().speed -= 0.2f;
                 summon.weapons[0].projectile.ApplyDisplay<obc>();
                 summon.weapons[0].projectile.pierce = 990;
                 summon.weapons[0].projectile.GetDamageModel().damage += 50;
