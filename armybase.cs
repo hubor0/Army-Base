@@ -204,6 +204,7 @@ public class armybase : BloonsTD6Mod
                 summon.weapons[0].projectile.AddBehavior(new DamageModifierForTagModel("Ddt", "Ddt", 1, 30, false, true));
                 summon.weapons[0].projectile.AddBehavior(new DamageModifierForTagModel("Zomg", "Zomg", 1, 18, false, true));
                 summon.weapons[0].projectile.AddBehavior(new DamageModifierForTagModel("Bad", "Bad", 1, 20, false, true));
+                summon.weapons[0].projectile.AddBehavior(new DamageModifierForTagModel("Boss", "Boss", 1, 15, false, true));
             }
         }
         public class u010 : ModUpgrade<ArmyBase>
@@ -303,6 +304,7 @@ public class armybase : BloonsTD6Mod
                 shell.projectile.AddBehavior(new DamageModifierForTagModel("Moab", "Moab", 1, 2, false, true));
                 shell.projectile.AddBehavior(new DamageModifierForTagModel("Bfb", "Bfb", 1, 2, false, true));
                 shell.projectile.AddBehavior(new DamageModifierForTagModel("Zomg", "Zomg", 1, 2, false, true));
+                shell.projectile.AddBehavior(new DamageModifierForTagModel("Boss", "Boss", 1, 4, false, true));
                 summon.weapons[0].projectile.AddBehavior(shell);
 
                 towerModel.AddBehavior(Game.instance.model.GetTowerFromId("MortarMonkey-040").GetAbility().Duplicate());
@@ -343,6 +345,7 @@ public class armybase : BloonsTD6Mod
                 missle.projectile.AddBehavior(new DamageModifierForTagModel("Ddt", "Ddt", 1, 50, false, true));
                 missle.projectile.AddBehavior(new DamageModifierForTagModel("Zomg", "Zomg", 1, 134, false, true));
                 missle.projectile.AddBehavior(new DamageModifierForTagModel("Bad", "Bad", 1, 230, false, true));
+                missle.projectile.AddBehavior(new DamageModifierForTagModel("Boss", "Boss", 1, 100, false, true));
                 summon.weapons[0].projectile.AddBehavior(missle);
                 summon.weapons[0].rate += 8f;
             }
@@ -421,6 +424,7 @@ public class armybase : BloonsTD6Mod
                 summon.weapons[0].projectile.AddBehavior(new DamageModifierForTagModel("Moab", "Moab", 1, 159, false, true));
                 summon.weapons[0].projectile.AddBehavior(new DamageModifierForTagModel("Bfb", "Bfb", 1, 289, false, true));
                 summon.weapons[0].projectile.AddBehavior(new DamageModifierForTagModel("Zomg", "Zomg", 1, 349, false, true));
+                summon.weapons[0].projectile.AddBehavior(new DamageModifierForTagModel("Boss", "Boss", 1, 360, false, true));
             }
         }
         public class u005 : ModUpgrade<ArmyBase>
@@ -447,6 +451,7 @@ public class armybase : BloonsTD6Mod
                 summon.weapons[0].projectile.AddBehavior(new DamageModifierForTagModel("Zomg", "Zomg", 1, 2589, false, true));
                 summon.weapons[0].projectile.AddBehavior(new DamageModifierForTagModel("Bad", "Bad", 1, 5589, false, true));
                 summon.weapons[0].projectile.AddBehavior(new DamageModifierForTagModel("DamageModifierForTagModel_Ceramic", "Ceramic", 1, 58, false, false));
+                summon.weapons[0].projectile.AddBehavior(new DamageModifierForTagModel("Boss", "Boss", 1, 5700, false, true));
 
 
             }
