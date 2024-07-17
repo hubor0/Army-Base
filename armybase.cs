@@ -224,6 +224,8 @@ public class armybase : BloonsTD6Mod
                 summon.RemoveFilter<FilterInvisibleModel>();
                 summon.weapons[0].projectile.SetHitCamo(true);
                 var diab = Game.instance.model.GetTowerFromId("NinjaMonkey-020").GetAttackModel().weapons[0].projectile.GetBehavior<RemoveBloonModifiersModel>().Duplicate();
+                diab.cleanseCamo = true;
+                summon.weapons[0].projectile.collisionPasses = new int[] { 0, -1 };
                 summon.weapons[0].projectile.AddBehavior(diab);
             }
         }
@@ -887,19 +889,16 @@ public class armybase : BloonsTD6Mod
         {
             ModHelper.Msg<armybase>("Army Base loaded!");
         }
+        }
+        }
         [HarmonyPatch(typeof(Il2CppAssets.Scripts.Simulation.SimulationBehaviors.NecroData), nameof(NecroData.RbePool))]
-        internal static class Necro_RbePool
+         internal static class Necro_RbePool
         {
             [HarmonyPrefix]
             private static bool Postfix(NecroData __instance, ref int __result)
             {
                 var tower = __instance.tower;
-                if (tower.towerModel.name.Contains("ArmyBase"))
-                {
-                    __result = 1;
-                }
+                    __result = 9999;
                 return false;
             }
         }
-    }
-}
