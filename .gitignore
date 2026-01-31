@@ -1,0 +1,88 @@
+# Build results
+bin/
+obj/
+out/
+[Bb]uild/
+[Ll]og/
+
+# Visual Studio files
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# NuGet
+*.nupkg
+packages/
+*.snupkg
+
+# Cache
+*.cache
+*.db
+*.db-shm
+*.db-wal
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# Auto-generated files
+Generated/
+GeneratedCode/
+
+# Rider / JetBrains
+.idea/
+*.DotSettings.user
+
+# OS-specific
+# Windows
+Thumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+
+# .NET
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Logs
+*.log
+logs/
+
+# Publish output
+publish/
+
+# Test results
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+
+# Resharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+
+# VS Code
+.vscode/
+
+# Unity (falls du Unity nutzt)
+Library/
+Temp/
+Obj/
+Build/
+Builds/
+Logs/
+UserSettings/
+MemoryCaptures/
+*.unitypackage
+
+# Modding (BTD6 spezifisch)
+MelonLoader/
+Mods/
+UserData/
+/bin/Debug/net6.0/armybase.deps.json
+/bin/Debug/net6.0/armybase.dll

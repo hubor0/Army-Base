@@ -2,8 +2,8 @@ namespace armybase;
 
 public static class ModHelperData
 {
-    public const string WorksOnVersion = "43.0";
-    public const string Version = "1.1.3";
+    public const string WorksOnVersion = "52.0";
+    public const string Version = "1.1.4";
     public const string Name = "Army Base";
 
     public const string Description = "Adds a new custom Army Base tower. Complete with all 15 tiers and a Paragon coming soon!";
