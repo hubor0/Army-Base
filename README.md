@@ -12,8 +12,7 @@ This tower Contains:
 * 15 Complete Upgrades
 * Custom Icons, portraits and 3D Models
 
-Planned
-* a Paragon Upgrade
-* Ultimate Crosspath Mod compatibility
+Paragon upgrade and 555 version (Ultimate crosspathing) available soon or already out on Tewtiys membership server!
 
 [![Requires BTD6 Mod Helper](https://raw.githubusercontent.com/gurrenm3/BTD-Mod-Helper/master/banner.png)](https://github.com/gurrenm3/BTD-Mod-Helper#readme)
+
